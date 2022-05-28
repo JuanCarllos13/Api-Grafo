@@ -1,83 +1,54 @@
-import React, {useState} from "react";
+import React from "react";
 import { render } from "react-dom";
+import Juan from './assets/juan.jpg'
+import Logo from './assets/logo.png'
 import Map from "./Map";
 import './index.css'
-// import { fetchLocalMapBox } from "./apiMapBox";
-// import AsyncSelect from "react-select/async";
 
-// const initialPosition = { lat: -22.2154042, lng: -54.8331331 };
 
 export function App() {
-  // const [deliveries, setDeliveries] = useState([]);
-
-  // const [position, setPosition] = useState (null);
-  // const [name, setName] = useState("");
-  // const [complement, setComplement] = useState("");
-  // const [address, setAddress] = useState({label: '', value: ''}| null);
-
-
-  // const [location, setLocation] = useState(initialPosition);
-
-  // const loadOptions = async (inputValue, callback) => {
-  //   if (inputValue.length < 5) return;
-  //   let places = [];
-  //   const response = await fetchLocalMapBox(inputValue);
-  //   response.features.map((item) => {
-  //     places.push({
-  //       label: item.place_name,
-  //       value: item.place_name,
-  //       coords: item.center,
-  //       place: item.place_name,
-  //     });
-  //   });
-
-  //   callback(places);
-  // };
-
-  // const handleChangeSelect = (event) => {
-  //   console.log("changed", event);
-  //   setPosition({
-  //     longitude: event.coords[0],
-  //     latitude: event.coords[1],
-  //   });
-
-  //   setAddress({ label: event.place, value: event.place });
-
-  //   setLocation({
-  //     lng: event.coords[0],
-  //     lat: event.coords[1],
-  //   });
-  // };
-
   return (
-    <div id="page-map">
-      <main>
-        <form className="landing-page-form">
-          <fieldset>
-            <legend>Endereço</legend>
+    <div className="Container">
+      <header>
+        <img src={Logo} alt='dt Money' className="Logo" />
+      </header>
+      <h1 className="Center">Apresentação de Grafo</h1>
+      <h2 className="Center">Equipe</h2>
+      <div className="Area-Image">
+        <label>
+          <img src={Juan} alt="Integrante" />
+          <p>Juan Carlos</p>
+          <p>Matricula: 03174765</p>
+        </label>
+        <label>
+          <img src={Juan} alt="Integrante" />
+          <p>Juan Carlos</p>
+          <p>Matricula: 03174765</p>
+        </label>
+        <label>
+          <img src={Juan} alt="Integrante" />
+          <p>Juan Carlos</p>
+          <p>Matricula: 03174765</p>
+        </label>
+        <label>
+          <img src={Juan} alt="Integrante" />
+          <p>Juan Carlos</p>
+          <p>Matricula: 03174765</p>
+        </label>
 
-            <div className="input-block">
-              <label>Endere√ßo</label>
-              {/* <AsyncSelect
-                placeholder="Digite seu endere√ßo..."
-                classNamePrefix="filter"
-                cacheOptions
-                loadOptions={loadOptions}
-                onChange={handleChangeSelect}
-                value={address}
-              /> */}
-            </div>
-          </fieldset>
+      </div>
 
-          <button className="confirm-button" type="submit">
-            Confirmar
-          </button>
-        </form>
-      </main>
+      <h3 className="Center">Professor</h3>
+      <div className="Area-Image">
+        <img src={Juan} alt="Integrante" style={{ marginBottom: '145px' }} />
+      </div>
       <div>
         <Map />
       </div>
+
+
     </div>
+
   );
 }
 render(<App />, document.getElementById("root"));

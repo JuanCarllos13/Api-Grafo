@@ -11,9 +11,8 @@ const style = {
 
 class Map extends React.Component {
   componentDidMount() {
-    // create map
+    // Criação do Mapa
     this.map = L.map("map", {
-      center: [-3.132968, -60.017685],
       zoom: 13,
       layers: [
         L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
@@ -23,9 +22,6 @@ class Map extends React.Component {
       ]
     });
     var routeControl = L.Routing.control({
-      show: true,
-      fitSelectedRoutes: true,
-      plan: false,
       lineOptions: {
         styles: [
           {
@@ -37,8 +33,6 @@ class Map extends React.Component {
       }
     })
       .addTo(this.map)
-      .getPlan();
-
     var newLatLngA = new L.LatLng(-3.132908, -60.017679, "taskA");
     var newLatLngB = new L.LatLng(-3.095256, -60.024043, "taskB");
 
