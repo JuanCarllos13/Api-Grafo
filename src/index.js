@@ -35,7 +35,7 @@ export function App() {
         <label>
           <img src={Ana} alt="Integrante" />
           <p>Ana Paulo</p>
-          <p>Matricula: 03174765</p>
+          <p>Matricula: 03111565</p>
         </label>''
       </div>
       <div>
