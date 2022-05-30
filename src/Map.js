@@ -1,6 +1,7 @@
 import React from "react";
 import L from "leaflet";
 import "./Style.css";
+import { map } from "leaflet";
 
 require("leaflet-routing-machine");
 
@@ -18,9 +19,10 @@ class Map extends React.Component {
         L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
           attribution:
             '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        })
+        }),
       ]
     });
+
     var routeControl = L.Routing.control({
       lineOptions: {
         styles: [
@@ -33,10 +35,33 @@ class Map extends React.Component {
       }
     })
       .addTo(this.map)
-    var newLatLngA = new L.LatLng(-3.132908, -60.017679, "taskA");
-    var newLatLngB = new L.LatLng(-3.095256, -60.024043, "taskB");
 
-    routeControl.setWaypoints([newLatLngA, newLatLngB]);
+
+
+    var options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+
+    function success(pos) {
+      var crd = pos.coords;
+
+      var newLatLngA = new L.LatLng(crd.latitude, crd.longitude, "pointA");
+      var newLatLngB = new L.LatLng(-3.095256, -60.024043, "pointB");
+
+
+      routeControl.setWaypoints([newLatLngA, newLatLngB]);
+
+
+    }
+
+    function error(err) {
+      console.warn('ERROR(' + err.code + '): ' + err.message);
+    };
+
+    navigator.geolocation.getCurrentPosition(success, error, options);
+
   }
   render() {
     return <div id="map" style={style} />;

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 .Container{
@@ -30,6 +31,7 @@ img{
 .Area-Image{
   width: 100%;
   display: flex;
+  align-self: center;
   justify-content: space-around;
 }
 

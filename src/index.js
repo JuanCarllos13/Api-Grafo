@@ -1,10 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
 import Juan from './assets/juan.jpg'
+import Marcos from './assets/marcos.jpg'
+import Mauri from './assets/mauri.jpg'
+import Ana from './assets/ana.png'
 import Logo from './assets/logo.png'
 import Map from "./Map";
 import './index.css'
-
 
 export function App() {
   return (
@@ -16,39 +18,30 @@ export function App() {
       <h2 className="Center">Equipe</h2>
       <div className="Area-Image">
         <label>
-          <img src={Juan} alt="Integrante" />
+          <img src={Juan} alt="Integrante Juan" />
           <p>Juan Carlos</p>
           <p>Matricula: 03174765</p>
         </label>
         <label>
-          <img src={Juan} alt="Integrante" />
-          <p>Juan Carlos</p>
+          <img src={Marcos} alt="Integrante Marcos" />
+          <p>Marcos Vinicius</p>
           <p>Matricula: 03174765</p>
         </label>
         <label>
-          <img src={Juan} alt="Integrante" />
-          <p>Juan Carlos</p>
+          <img src={Mauri} alt="Integrante" />
+          <p>Mauricio Da Costa</p>
           <p>Matricula: 03174765</p>
         </label>
         <label>
-          <img src={Juan} alt="Integrante" />
-          <p>Juan Carlos</p>
+          <img src={Ana} alt="Integrante" />
+          <p>Ana Paulo</p>
           <p>Matricula: 03174765</p>
-        </label>
-
-      </div>
-
-      <h3 className="Center">Professor</h3>
-      <div className="Area-Image">
-        <img src={Juan} alt="Integrante" style={{ marginBottom: '145px' }} />
+        </label>''
       </div>
       <div>
         <Map />
       </div>
-
-
     </div>
-
   );
 }
 render(<App />, document.getElementById("root"));
