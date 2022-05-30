@@ -25,16 +25,16 @@ export function App() {
         <label>
           <img src={Marcos} alt="Integrante Marcos" />
           <p>Marcos Vinicius</p>
-          <p>Matricula: 03174765</p>
+          <p>Matricula: 03177734</p>
         </label>
         <label>
           <img src={Mauri} alt="Integrante" />
           <p>Mauricio Da Costa</p>
-          <p>Matricula: 03174765</p>
+          <p>Matricula: 03106694</p>
         </label>
         <label>
           <img src={Ana} alt="Integrante" />
-          <p>Ana Paulo</p>
+          <p>Ana Paula</p>
           <p>Matricula: 03111565</p>
         </label>''
       </div>
