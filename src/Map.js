@@ -1,7 +1,7 @@
 import React from "react";
 import L from "leaflet";
 import "./Style.css";
-import { map } from "leaflet";
+
 
 require("leaflet-routing-machine");
 

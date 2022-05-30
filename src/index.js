@@ -18,25 +18,25 @@ export function App() {
       <h2 className="Center">Equipe</h2>
       <div className="Area-Image">
         <label>
-          <img src={Juan} alt="Integrante Juan" />
+          <img src={Juan} alt="Integrante Juan"  className="imageInte"/>
           <p>Juan Carlos</p>
           <p>Matricula: 03174765</p>
         </label>
         <label>
-          <img src={Marcos} alt="Integrante Marcos" />
+          <img src={Marcos} alt="Integrante Marcos"  className="imageInte"/>
           <p>Marcos Vinicius</p>
           <p>Matricula: 03174765</p>
         </label>
         <label>
-          <img src={Mauri} alt="Integrante" />
+          <img src={Mauri} alt="Integrante"  className="imageInte"/>
           <p>Mauricio Da Costa</p>
           <p>Matricula: 03174765</p>
         </label>
         <label>
-          <img src={Ana} alt="Integrante" />
-          <p>Ana Paulo</p>
+          <img src={Ana} alt="Integrante"  className="imageInte"/>
+          <p>Ana Paula</p>
           <p>Matricula: 03111565</p>
-        </label>''
+        </label>
       </div>
       <div>
         <Map />
